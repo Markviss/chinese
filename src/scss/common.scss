@@ -1,0 +1,98 @@
+// Заголовки, общие БЭМ блоки и прочее...
+
+.descr {
+	@include adaptiv-font(25, 12);
+	letter-spacing: 0.03em;
+	margin-bottom: 30px;
+    @media (max-width: 767px) {
+        margin-bottom: 35px;
+    }
+}
+
+
+.btn {
+	display: inline-block;
+	box-sizing: border-box;
+	padding: 1px;
+	outline: none;
+	border: 1px solid #02880A;
+	border-radius: 25px;
+	height: 46px;
+    @include adaptiv-font(25, 17);
+	line-height: 0;
+	text-decoration: none;
+	color: rgb(252, 214, 0);
+	background-color: #fff;
+	position: relative;
+	overflow: hidden;
+	vertical-align: center;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	touch-action: manipulation;
+}
+.btn span {
+	display: block;	
+	box-sizing: border-box;
+	padding: 0 25px;    
+	height: 42px;
+	line-height: 38px;    
+	border: 1px solid #02880A;
+	border-radius: 25px;    
+	color: #FFFFFF;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 100%), #02880A;
+	text-align: center;
+	font-weight: 600;
+}
+.btn:focus-visible {
+	box-shadow: 0 0 0 3px lightskyblue;
+}
+.btn:hover span {
+	background-color: #029b0c
+}
+.btn:active span {
+	background-color: #029b0c !important;
+}
+.btn:disabled {
+	opacity: 0.65;
+	pointer-events: none;
+}
+
+
+
+.underline {
+	color: #000000; 
+    position: relative;
+    
+}
+.underline:after {
+	content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 1px;
+    background-color: rgba(13, 124, 3, 0.5);
+    transition: width 0.5s;
+}
+
+.underline:hover:after {
+	content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 1px; 
+    background-color: rgba(13, 124, 3, 0.5); 
+    transition: width 0.5s; 
+}
+     
+
+
+[class*="__content"] {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}

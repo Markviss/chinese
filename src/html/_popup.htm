@@ -1,0 +1,27 @@
+<!-----------------popup_more----------------->
+
+<div id="popup_form" aria-hidden="true" class="popup popup_more">
+  <div class="popup__wrapper">
+    <div class="popup__cont">
+      <button data-close class="popup__close"></button>
+      <form enctype="multipart/form-data" method="post" id="form" onsubmit="send(event, 'send.php')" class="decor">
+        <div class="form-left-decoration"></div>
+        <div class="form-right-decoration"></div>
+        <div class="circle"></div>
+        <div class="form-inner">
+          <h4>Напишите нам</h4>
+          <input name="name" type="text" placeholder="Имя" >
+          <input name="tel" type="tel" placeholder="Телефон">
+          <textarea name="text" placeholder="Сообщение..." rows="3"></textarea>
+          <input type="submit" value="Отправить">
+        </div>
+      </form>
+          <p class="agreement">
+          Нажимая на кнопку, вы принимаете <a href="#">Положение</a> и
+          <a href="#">Согласие</a> на обработку персональных данных.
+        </p>
+    </div>
+  </div>
+</div>
+
+
